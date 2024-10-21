@@ -17,7 +17,7 @@ nrresqml = {git = "https://github.com/equinor/nrresqml"}
 scipy = "^1.9.3"
 numpy = "^1.26"
 h5py = "^3.11.0"
-matplotlib = "~3.7.2"
+matplotlib = "^3.9.1"
 tqdm = "~4.66.1"
 
 [build-system]
