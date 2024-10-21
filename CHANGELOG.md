@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/equinor/vargrest/compare/v1.2.1...v1.2.2) (2024-10-21)
+
+
+### Bug Fixes
+
+* updated matplotlib ([cf30b5a](https://github.com/equinor/vargrest/commit/cf30b5a2dad259d561ddc82595c88069a7055d7d))
+
 ## [1.2.1](https://github.com/equinor/vargrest/compare/v1.2.0...v1.2.1) (2024-09-16)
 
 
