@@ -2,6 +2,7 @@ import json
 from enum import Enum
 
 import numpy as np
+import pandas as pd
 import os
 import pickle
 from typing import Union, Dict, List
@@ -44,10 +45,17 @@ def summarize(pe: ParametricVariogramEstimate, meta_data: Dict[SummaryDataType, 
         for d in SummaryDataType
         if d.value in polished_flat
     }
-    summary[SummaryDataType.Quality.value] = pe.quality.full
-    summary[SummaryDataType.QualityX.value] = pe.quality.x_slice
-    summary[SummaryDataType.QualityY.value] = pe.quality.y_slice
-    summary[SummaryDataType.QualityZ.value] = pe.quality.z_slice
+    if(pd.isna(pe.quality) == False):
+        summary[SummaryDataType.Quality.value] = pe.quality.full
+        summary[SummaryDataType.QualityX.value] = pe.quality.x_slice
+        summary[SummaryDataType.QualityY.value] = pe.quality.y_slice
+        summary[SummaryDataType.QualityZ.value] = pe.quality.z_slice
+    else:
+        summary[SummaryDataType.Quality.value] = np.nan
+        summary[SummaryDataType.QualityX.value] = np.nan
+        summary[SummaryDataType.QualityY.value] = np.nan
+        summary[SummaryDataType.QualityZ.value] = np.nan
+        print(f"Archel {meta_data[SummaryDataType.ArchelFilter]} provided no valuable results")
     # Include meta data
     summary.update({m.value: v for m, v in meta_data.items()})
     return summary
