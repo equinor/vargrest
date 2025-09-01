@@ -97,7 +97,7 @@ def fit_3d_field(
         sig = None
 
     # Least-squares fit
-    popt = curve_fit(func, indep_data, dep_data, sigma=sig, p0=par_guess, bounds=bounds, jac=jac)[0]
+    popt = curve_fit(func, indep_data, dep_data, sigma=sig, p0=par_guess, bounds=bounds, jac=jac, maxfev=10000)[0]
 
     # Calculate quality of solution
     quality = _calculate_quality_1(lambda x: func(x, *popt), indep_data, dep_data, not_nan, array)
