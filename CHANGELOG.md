@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.4](https://github.com/equinor/vargrest/compare/v1.2.3...v1.2.4) (2025-09-01)
+
+
+### Bug Fixes
+
+* upped max number of function evaluations to stop script from failing ([#17](https://github.com/equinor/vargrest/issues/17)) ([2095d96](https://github.com/equinor/vargrest/commit/2095d96dedf49ce160714217d424028749252fe1))
+
 ## [1.2.3](https://github.com/equinor/vargrest/compare/v1.2.2...v1.2.3) (2025-09-01)
 
 
