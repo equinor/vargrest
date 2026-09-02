@@ -1,3 +1,5 @@
+[![SCM Compliance](https://scm-compliance-api.radix.equinor.com/repos/equinor/e77505ef-622e-4f7b-a768-8af1b68154a3/badge)](https://scm-compliance-api.radix.equinor.com/repos/equinor/e77505ef-622e-4f7b-a768-8af1b68154a3/badge)
+
 This package estimates parametric variograms from Delft3D-based RESQML models. The repository is tightly linked with https://github.com/NorskRegnesentral/nrresqml 
 
 The main function is
